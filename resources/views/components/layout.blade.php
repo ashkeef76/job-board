@@ -8,7 +8,7 @@
     <title>Job Board</title>
 
     <!-- Fonts -->
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Styles -->
 
 
