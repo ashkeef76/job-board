@@ -15,11 +15,14 @@ class Employer
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if($request->user==null||$request->user->employer==null)
+      //  dd($request->user());
+        if($request->user()==null||$request->user()->employer==null)
         {
             return redirect(route('employer.create'))
              ->with('error','You need to register as employer');
         }
+      
+       
         return $next($request);
     }
 }
