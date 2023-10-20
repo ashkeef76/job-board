@@ -3,7 +3,7 @@
     <x-card class="mb-8">
         <form action="{{ route('my-jobs.store') }}" method="POST">
             @csrf
-            @method("PUT")
+
             <div class="mb-4 grid grid-cols-2 gap-4">
                 <div>
                     <x-label for="title" :required="true">Job Title </x-label>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-span-2">
                     <x-label for="salary" :required="true">Salary </x-label>
-                    <x-text-input name="title" type="number" />
+                    <x-text-input name="salary" type="number" />
                 </div>
                 <div class="col-span-2">
                     <x-label for="description" :required="true">Description </x-label>
