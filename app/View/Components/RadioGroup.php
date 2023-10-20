@@ -16,19 +16,21 @@ class RadioGroup extends Component
         public array $options,
         public ?bool $allOption = true,
         public ?string $value = null
+        // ['entry' => 'entry', 'senior']
+        // 0,        1
 
-    )
-    {
+        // ['Entry' => 'entry', 'Senior' => 'senior']
+    ) {
         //
-        $this->options=$this->optionsWithLables();
     }
 
-    public function optionsWithLables ():array
+    public function optionsWithLabels(): array
     {
         return array_is_list($this->options) ?
-              array_combine($this->options,$this->options) 
-              :$this->options;
+            array_combine($this->options, $this->options)
+            : $this->options;
     }
+
     /**
      * Get the view / contents that represent the component.
      */
