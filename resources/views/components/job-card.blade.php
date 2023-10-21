@@ -9,9 +9,12 @@
         </div>
     </div>
     <div class="flex text-sm  justify-between mb-4">
-        <div class="flex space-x-2">
+        <div class="flex items-center space-x-4">
             <div>{{ $job->employer->company_name }}</div>
             <div>{{ $job->location }}</div>
+            @if ($job->deleted_at)
+            <span class="text-xs text-red-500">Deleted</span>
+            @endif
         </div>
         <div class="flex space-x-1  text-xs">
             <x-tag>
